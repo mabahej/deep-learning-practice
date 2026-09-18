@@ -1,0 +1,5 @@
+data/
+checkpoint.pth
+*.pyc
+__pycache__/
+runs/
