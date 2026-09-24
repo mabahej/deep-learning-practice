@@ -100,5 +100,5 @@ models = {}
 for opt in ["SGD", "Momentum", "RMSprop", "Adam"]:
     models[opt] = train_model(opt, learning_rate=0.001)
 
-# Évaluation du meilleur modèle (à remplacer par le meilleur optimiseur observé dans TensorBoard)
-evaluate_model(models["Adam"], test_loader)
+
+evaluate_model(models["RMSprop"], test_loader)
