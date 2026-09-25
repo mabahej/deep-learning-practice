@@ -30,6 +30,7 @@ On utiliserait **`torch.utils.data.IterableDataset`**. Il permet de lire les don
 avant modificatio de l1 l2
 ![alt text](./images/2.png)
 apres modification 
+
 ![alt text](./images/3.png)
 
 Avec `l1_lambda = 0.1` et `l2_lambda = 0`, on observe que l'apprentissage ne progresse presque pas. La loss reste autour de `1.62–1.64` et la précision reste proche de `50 %`. Sur le test, on obtient une accuracy de `50.20 %` et une précision de `0 %`.
