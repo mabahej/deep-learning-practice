@@ -29,6 +29,7 @@ On utiliserait **`torch.utils.data.IterableDataset`**. Il permet de lire les don
 ### Question 3 – `l1_lambda = 0.1` et `l2_lambda = 0`
 avant modificatio de l1 l2
 ![alt text](./images/2.png)
+
 apres modification 
 
 ![alt text](./images/3.png)
