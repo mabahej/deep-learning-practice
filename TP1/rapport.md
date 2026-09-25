@@ -45,7 +45,7 @@ tensorboard --version
 
 ### Architecture et paramètres
 
-![alt text](image-4.png)
+![alt text](./images/1.png)
 
 Nombre total de paramètres :
 - **Sans biais :** Couche 1 = 3 × 4 = 12 ; Couche 2 = 4 × 2 = 8 → **Total = 20**
@@ -66,7 +66,7 @@ Y  : (N, 2)
 ### Graphe de calcul et rétropropagation
 
 f(x, y, z) = x/y + z, avec q = x/y.
-![ ](image-5.png)
+![ ](./images/2.png)
 
 **Forward pass (x=2, y=4, z=0) :** q = 2/4 = 0.5 ; f = 0.5 + 0 = **0.5**
 
@@ -148,9 +148,11 @@ Cela isole les logs de chaque run dans un dossier distinct, permettant de compar
 **Smoothing et bruit sur `Loss/train_step` vs `Loss/train` :**
 `Loss/train_step` est enregistrée par batch (32 images), donc très bruitée. `Loss/train` est moyennée sur toute l'époque, ce qui annule le bruit batch-à-batch et donne une courbe beaucoup plus lisse.
 > _le niveau entre ~0.6–0.7 : la tendance devient claire sans masquer de changements importants._
-![alt text](image-6.png)
-**Comparaison des 3 runs (Run 1 : lr=1e-2/bs=32, Run 2 : lr=1e-3/bs=32, Run 3 : lr=1e-1/bs=128) :**
-![alt text](image-7.png)
+![alt text](./images/3.png)
+
+## Comparaison des 3 runs
+ (Run 1 : lr=1e-2/bs=32, Run 2 : lr=1e-3/bs=32, Run 3 : lr=1e-1/bs=128) :**
+![alt text](./images/4.png)
 > 
 
 Ce que montrent les courbes :

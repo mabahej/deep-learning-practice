@@ -5,8 +5,17 @@ Nom : Mabahej Ben Hassine
 ## 1. Création d'un dataset personnalisé
 
 
-la taille du dataset après `drop_duplicates` et shape d'un batch affichés par `python dataset.py`est 
-![alt text](image-8.png)
+![alt text](./images/0.png)
+La taille du dataset après `drop_duplicates` est de **70 000 échantillons**.
+
+Le dataset est ensuite divisé en :
+- **56 000** échantillons pour l'entraînement (80 %)
+- **7 000** pour la validation (10 %)
+- **7 000** pour le test (10 %)
+
+La forme d'un batch est :
+- Features : `torch.Size([64, 16])`
+- Labels : `torch.Size([64, 1])`
 ### Question 1 – Pourquoi `StandardScaler` sur tout le dataset est-il une mauvaise pratique ?
 
 C’est du **data leakage** (fuite de données). Le `StandardScaler` utilise la moyenne et l’écart-type de tout le dataset, y compris les données de validation et de test.
@@ -19,9 +28,9 @@ On utiliserait **`torch.utils.data.IterableDataset`**. Il permet de lire les don
 ## 2. MLP et régularisation L1 / L2
 ### Question 3 – `l1_lambda = 0.1` et `l2_lambda = 0`
 avant modificatio de l1 l2
-![alt text](image-9.png)
+![alt text](./images/2.png)
 apres modification 
-![alt text](image-11.png)
+![alt text](./images/3.png)
 
 Avec `l1_lambda = 0.1` et `l2_lambda = 0`, on observe que l'apprentissage ne progresse presque pas. La loss reste autour de `1.62–1.64` et la précision reste proche de `50 %`. Sur le test, on obtient une accuracy de `50.20 %` et une précision de `0 %`.
 
@@ -45,7 +54,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=l2_lambda)
 
 ### Capture TensorBoard
 
-![alt text](image-12.png)
+![alt text](./images/6.png)
 
 ### Question 6 – Optimiseur qui converge le plus vite initialement
 
@@ -57,7 +66,7 @@ Le momentum garde en mémoire les gradients précédents, ce qui accélère la d
 
 ## 4. Analyse des métriques
 
-![alt text](image-13.png)
+![alt text](./images/7.png)
 
 ### Question 8 – Définitions
 
