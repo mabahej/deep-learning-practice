@@ -238,44 +238,41 @@ Remarque : le job 8994 a été interrompu pendant la 10e époque en raison de la
 
 | Époque | Train Loss | Val Loss | Train Acc | Val Acc |
 |---:|---:|---:|---:|---:|
-| 1 | 5.7004 | 4.7244 | 4.47 % | 11.20 % |
-| 2 | 4.7346 | 4.1044 | 12.15 % | 19.00 % |
-| 3 | 4.3148 | 3.7448 | 17.08 % | 23.93 % |
-| 4 | 4.0362 | 3.4741 | 20.77 % | 27.96 % |
-| 5 | 3.8407 | 3.3105 | 23.56 % | 30.50 % |
-| 6 | 3.6863 | 3.1524 | 25.73 % | 33.26 % |
-| 7 | 3.5674 | 3.0545 | 27.49 % | 35.24 % |
-| 8 | 3.4664 | 2.9922 | 29.05 % | 36.09 % |
-| 9 | 3.3855 | 2.8925 | 30.33 % | 38.15 % |
+| 1 | 5,7004 | 4,7244 | 4,47 % | 11,20 % |
+| 2 | 4,7346 | 4,1044 | 12,15 % | 19,00 % |
+| 3 | 4,3148 | 3,7448 | 17,08 % | 23,93 % |
+| 4 | 4,0362 | 3,4741 | 20,77 % | 27,96 % |
+| 5 | 3,8407 | 3,3105 | 23,56 % | 30,50 % |
+| 6 | 3,6863 | 3,1524 | 25,73 % | 33,26 % |
+| 7 | 3,5674 | 3,0545 | 27,49 % | 35,24 % |
+| 8 | 3,4664 | 2,9922 | 29,05 % | 36,09 % |
+| 9 | 3,3855 | 2,8925 | 30,33 % | 38,15 % |
+ 
+La loss d'entraînement diminue progressivement de 5,7004 à 3,3855, tandis que la loss de validation passe de 4,7244 à 2,8925. En parallèle, les accuracies augmentent à chaque époque. Le modèle améliore donc ses performances sur les données d'entraînement et de validation.
+ 
+L'accuracy de validation atteint 38,15 % à la neuvième époque, contre 30,33 % pour l'entraînement. La loss de validation reste inférieure à la loss d'entraînement sur les neuf époques observées.
+ 
+**Comparaison de l'écart Loss/Train – Loss/Validation avec l'exercice 3**
+ 
+| Expérience | Train Loss | Val Loss | Écart (Val − Train) |
+|---|---:|---:|---:|
+| AlexNet, 20 000 images (10ᵉ époque, step 9) | 6,3291 | 6,4041 | +0,075 |
+| AlexNet, ImageNet complet (9ᵉ époque, step 8) | 3,3855 | 2,8925 | −0,493 |
+ 
+Sur 20 000 images, la loss de validation est **au-dessus** de la loss d'entraînement (+0,075) : le modèle est un peu meilleur sur les images qu'il a déjà vues que sur les nouvelles. C'est le début d'un écart de généralisation, qui grandirait avec plus d'époques. Sur nos 10 époques, le modèle apprend encore à peine (loss proche de ln(1000) ≈ 6,91). Sur ImageNet complet, l'écart est **négatif** (−0,976 à l'époque 1, −0,493 à l'époque 9) : la validation est meilleure que l'entraînement, donc il n'y a pas de surapprentissage visible.
+ 
+**Pourquoi le surapprentissage est-il beaucoup plus faible ici ?**
+ 
+- **Beaucoup plus de données :** 1,28 million d'images contre 20 000 (64 fois plus). Le modèle voit beaucoup plus d'exemples différents et apprend des caractéristiques générales.
+- **Rapport paramètres / exemples :** AlexNet a 61,1 millions de paramètres, soit environ 3055 paramètres par image avec 20 000 images, mais seulement environ 48 avec ImageNet complet. Avec 20 000 images, le modèle peut mémoriser le jeu d'entraînement. Avec 1,28 million d'images, c'est beaucoup plus difficile.
+- **Data augmentation et dropout :** `RandomResizedCrop`, `RandomHorizontalFlip` et le Dropout (p = 0,5) limitent la mémorisation. Ils étaient aussi actifs à l'exercice 3, donc ils n'expliquent pas la différence entre les deux expériences. Ils expliquent surtout pourquoi la loss de validation est plus basse que celle d'entraînement (partie suivante).
+Sur les neuf époques, la loss de validation continue de baisser et l'accuracy de validation de monter : aucun signe évident de surapprentissage. L'entraînement s'est arrêté à l'époque 9 à cause de la limite de 4 h du job, donc on ne voit pas la suite.
+ 
+### 3 – Observation surprenante : pourquoi la Loss/Validation est plus basse que la Loss/Train ?
+ 
+Dans nos logs, la loss de validation est plus basse que la loss d'entraînement à chacune des 9 époques (par exemple 4,72 contre 5,70 à l'époque 1, et 2,89 contre 3,39 à l'époque 9). Deux raisons liées à notre code :
+ 
+1. **Le Dropout :** il est **actif** pendant l'entraînement (`model.train()`), donc le réseau travaille avec la moitié des neurones des couches denses (p = 0,5), ce qui rend ses prédictions moins bonnes. En validation (`model.eval()`), il est **désactivé** et le réseau complet donne de meilleures prédictions.
+2. **La data augmentation :** les images d'entraînement sont déformées (`RandomResizedCrop`, `RandomHorizontalFlip`), donc plus difficiles. Les images de validation sont simples (`Resize(256)` + `CenterCrop(227)`, objet au centre), donc plus faciles.
+Remarque en plus : la Loss/Train est une **moyenne sur toute l'époque**, calculée pendant que le modèle progresse. La Loss/Validation est calculée **à la fin** de l'époque avec le modèle le plus à jour.
 
-Les résultats montrent que la loss d'entraînement diminue progressivement de 5.7004 à 3.3855, tandis que la loss de validation passe de 4.7244 à 2.8925. En parallèle, les accuracies augmentent au fil des époques. Le modèle améliore donc progressivement ses performances sur les données d'entraînement et de validation.
-
-L'accuracy de validation atteint 38.15 % à la neuvième époque, contre 30.33 % pour l'entraînement. La loss de validation reste inférieure à la loss d'entraînement sur les neuf époques observées. Cette différence peut notamment s'expliquer par le dropout et les transformations aléatoires appliquées pendant l'entraînement.
-
-**Pourquoi le surapprentissage est-il beaucoup plus faible que sur 20 000 images ?**
-
-- **Un jeu de données beaucoup plus grand :** ImageNet complet contient environ 1,28 million d'images, soit 64 fois plus que le sous-ensemble de 20 000 images. Cette diversité aide le modèle à apprendre des caractéristiques générales plutôt qu'à mémoriser les exemples d'entraînement.
-- **Une meilleure diversité des exemples :** avec seulement 20 000 images et environ 61 millions de paramètres, AlexNet dispose d'une grande capacité par rapport à la quantité de données disponible. Le modèle peut alors mémoriser plus facilement les exemples d'entraînement, ce qui peut provoquer un écart important entre les performances d'entraînement et de validation.
-- **La data augmentation :** les transformations comme `RandomResizedCrop` et le retournement horizontal aléatoire (`RandomHorizontalFlip`) produisent des variations des images d'entraînement. Cela rend la mémorisation des entrées exactes plus difficile et favorise la généralisation.
-- **Le dropout :** avec une probabilité de 0,5 dans les couches concernées d'AlexNet, certains neurones sont désactivés aléatoirement pendant l'entraînement. Cette régularisation limite la dépendance du modèle à certaines activations et contribue à réduire le surapprentissage.
-
-Dans les neuf époques observées, la loss de validation continue de diminuer et l'accuracy de validation continue d'augmenter. Ces résultats ne montrent donc pas de signe évident d'un surapprentissage croissant sur cette période. Une conclusion définitive nécessiterait cependant d'observer la suite de l'entraînement.
-
-###  3 – Pourquoi la Loss/Validation peut être plus basse que la Loss/Train au début
-
-Deux raisons liées à notre code :
-
-1. **Le Dropout** : il est **actif** pendant l'entraînement (`model.train()`), donc le réseau travaille avec la moitié des neurones des couches denses, ce qui rend les prédictions moins bonnes. En validation (`model.eval()`), il est **désactivé** et le réseau complet donne de meilleures prédictions.
-2. **La data augmentation** : les images d'entraînement sont déformées (recadrage aléatoire, miroir), donc plus difficiles. Les images de validation sont simples (Resize + CenterCrop, objet au centre), donc plus faciles.
-
-(Remarque en plus : la Loss/Train est une **moyenne sur toute l'époque**, pendant que le modèle progresse, alors que la Loss/Validation est calculée **à la fin** de l'époque avec le modèle le plus à jour.)
-
----
-
-## Rendu Git
-
-```
-git add TP3/rapport.md TP3/train_imagenet.py TP3/run_imagenet.sh TP3/captures/
-git commit -m "TP3 : réseaux convolutifs (MLP vs AlexNet, ImageNet)"
-git push
-```
