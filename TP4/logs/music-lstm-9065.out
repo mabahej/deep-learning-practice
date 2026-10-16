@@ -1,0 +1,90 @@
+Job 9065 sur starfighter-slurm-node-01-1
+Thu Oct 15 12:42:28 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      Off |   00000000:06:10.0 Off |                    0 |
+| N/A   35C    P8             16W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Nombre de chansons (Train) : 214122
+Nombre de chansons (Val)   : 2162
+
+--- Exemple de partition (Train[0]) ---
+X:1
+L:1/8
+M:4/4
+K:Emin
+|: E2 EF E2 EF | DEFG AFDF | E2 EF E2 B2 |1 efe^d e2 e2 :|2 efe^d e3 B |: e2 ef g2 fe | 
+ defg afdf |1 e2 ef g2 fe | efe^d e3 B :|2 g2 bg f2 af | efe^d e2 e2 ||
+Taille du vocabulaire : 95 caractères uniques
+Caractères : '\n !"#$&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+Longueur moyenne : 290.1 | Longueur max : 2968
+Partition 0 : 183 caractères -> 500 après padding/troncature
+Vectorisée (10 premiers indices) : [56, 26, 17, 0, 44, 26, 17, 15, 24, 0]
+Partitions tronquées : 14697 / 214122 (6.9 %)
+Epoch 01 | Train Loss: 0.8246 | Val Loss: 0.6072 | Val Acc: 0.8035 | Avg GradNorm: 0.389
+Epoch 02 | Train Loss: 0.5714 | Val Loss: 0.5530 | Val Acc: 0.8199 | Avg GradNorm: 0.075
+Epoch 03 | Train Loss: 0.5362 | Val Loss: 0.5328 | Val Acc: 0.8257 | Avg GradNorm: 0.073
+Epoch 04 | Train Loss: 0.5163 | Val Loss: 0.5177 | Val Acc: 0.8319 | Avg GradNorm: 0.068
+Epoch 05 | Train Loss: 0.5012 | Val Loss: 0.5129 | Val Acc: 0.8317 | Avg GradNorm: 0.068
+Epoch 06 | Train Loss: 0.4904 | Val Loss: 0.5034 | Val Acc: 0.8353 | Avg GradNorm: 0.064
+Epoch 07 | Train Loss: 0.4906 | Val Loss: 0.5022 | Val Acc: 0.8364 | Avg GradNorm: 0.066
+Epoch 08 | Train Loss: 0.4797 | Val Loss: 0.5010 | Val Acc: 0.8368 | Avg GradNorm: 0.062
+Epoch 09 | Train Loss: 0.5133 | Val Loss: 0.5065 | Val Acc: 0.8338 | Avg GradNorm: 0.090
+Epoch 10 | Train Loss: 0.4820 | Val Loss: 0.5054 | Val Acc: 0.8348 | Avg GradNorm: 0.058
+Epoch 11 | Train Loss: 0.4719 | Val Loss: 0.4936 | Val Acc: 0.8392 | Avg GradNorm: 0.059
+Epoch 12 | Train Loss: 0.4616 | Val Loss: 0.4906 | Val Acc: 0.8394 | Avg GradNorm: 0.060
+Epoch 13 | Train Loss: 0.4557 | Val Loss: 0.4911 | Val Acc: 0.8395 | Avg GradNorm: 0.058
+Epoch 14 | Train Loss: 0.4542 | Val Loss: 0.4922 | Val Acc: 0.8393 | Avg GradNorm: 0.058
+Epoch 15 | Train Loss: 0.4513 | Val Loss: 0.4893 | Val Acc: 0.8411 | Avg GradNorm: 0.059
+Epoch 16 | Train Loss: 0.4485 | Val Loss: 0.5079 | Val Acc: 0.8353 | Avg GradNorm: 0.061
+Epoch 17 | Train Loss: 0.5869 | Val Loss: 0.6334 | Val Acc: 0.7976 | Avg GradNorm: 0.177
+Epoch 18 | Train Loss: 0.5750 | Val Loss: 0.5702 | Val Acc: 0.8155 | Avg GradNorm: 0.108
+Epoch 19 | Train Loss: 0.5455 | Val Loss: 0.5549 | Val Acc: 0.8197 | Avg GradNorm: 0.101
+Epoch 20 | Train Loss: 0.6362 | Val Loss: 0.7151 | Val Acc: 0.7752 | Avg GradNorm: 0.349
+Early stopping déclenché à l'époque 20.
+
+===== T = 0.2 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ A2 | d2d2 d2c2 | B2A2 A2G2 | F2A2 A2d2 | e2d2 c2B2 | A2A2 A2Bc | d2d2 d2ef | g2f2 e2d2 | 
+ c2A2 A2 :|                                                                                                                                                                                                      
+
+
+===== T = 0.8 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ A3/2 | dAFA dAFD | GBAE GEBE | BAFA dAFD | GEFD E2Fd | d^cec ABAG | FAdf gfed | 
+ f2d2 d2d2 |]                                                                                                                                                                                                             
+
+
+===== T = 2.0 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ (=c^d)=cE BDAG |: gab(g d'bge) d4"_AM"F:>)M:A2| ba.
+b ^Tg"_(udvergava= Robjklrg)t xolme1nten'!gIntermoter" c2!p!AAA2<(uble.A)"C7PScr" |:"Em" 
+ f2eB d4-"Gm" d6!40] |"C#md" faEA keeAB"A/CE"FRFEa- | eEcaBcbB"F<**A" BBdE"Desua" b2 | 
+"Gm"Bb(cb) d'g" (adbmime[sh Tg8) z{efg}=c'(=[gB]^f/ |{f} g3^f)(gE)"A#
+

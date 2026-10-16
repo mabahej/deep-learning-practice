@@ -1,0 +1,127 @@
+Job 9064 sur starfighter-slurm-node-02-1
+Thu Oct 15 12:40:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      Off |   00000000:06:10.0 Off |                    0 |
+| N/A   59C    P0             21W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Nombre de chansons (Train) : 214122
+Nombre de chansons (Val)   : 2162
+
+--- Exemple de partition (Train[0]) ---
+X:1
+L:1/8
+M:4/4
+K:Emin
+|: E2 EF E2 EF | DEFG AFDF | E2 EF E2 B2 |1 efe^d e2 e2 :|2 efe^d e3 B |: e2 ef g2 fe | 
+ defg afdf |1 e2 ef g2 fe | efe^d e3 B :|2 g2 bg f2 af | efe^d e2 e2 ||
+Taille du vocabulaire : 95 caractères uniques
+Caractères : '\n !"#$&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+Longueur moyenne : 290.1 | Longueur max : 2968
+Partition 0 : 183 caractères -> 500 après padding/troncature
+Vectorisée (10 premiers indices) : [56, 26, 17, 0, 44, 26, 17, 15, 24, 0]
+Partitions tronquées : 14697 / 214122 (6.9 %)
+Epoch 01 | Train Loss: 2.2649 | Val Loss: 1.4768 | Val Acc: 0.6490 | Avg GradNorm: 3.199
+
+===== T = 0.2 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+8
+M:1/8
+L:1/8
+M:1/8
+M:1/8
+M:1/8
+K:1/8
+K:1/8
+K:1/8
+M:1/8
+M:1/8
+K:1/8
+K:1/8
+M:1/8
+K:1/8
+M:1/8
+K:1/8
+K:1/8
+M:1/8
+K:1/8
+K:1/8
+M:1/8
+K:1/8
+K:1/8
+M:1/8
+K:1/8
+M:1/8
+M:1/8
+K:1/8
+M:1/8
+M:1/8
+K:1/8
+L:1/8
+M:1/8
+K:1/8
+M:1/8
+M:1/8
+K:1/8
+M:1/8
+M:1/8
+M:1/8
+K:1/8
+M:1/8
+M:1/8
+M:1/8
+L:1/8
+K:1/8
+M:1/8
+L:1/8
+M:1/8
+K:1/
+
+
+===== T = 0.8 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ | d        A                 c B |                     d^ |      |  a G2 c2 | c          dc |                 d2 G3 E2 aA  d     G2  BA |           cGG |                         A2 A | | F GA   d dB |dD" (2e |              | |                                    gecfA E4 | | BG | |   e2 |     c2 |  
+
+
+===== T = 2.0 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+4(=D:5G876Q
+D>K  :dgn | |8s g2:}
+Q""AM"F:H)Z= G|m#c.
+b\-TA" ["d G3g}G"} |g9ADE)g]B f[GE.1:2(]:!:8d-Q
+K:D BH|c2-<}3AA|Bouml[V\9"L
+L:1/2-0af+f:3
+8fC2Br/Ls
+{/
+b4K
+4)] BGCL d]B^kEO9k5q}EY}y5E)FRqFaz2 Ac |acc| gd<0 c"FB.diq G2.-"Bb"-KXA}bv BA(c]:
+-:g
+    A/ | GAA | 82 d{  {|cc(iA[-BB^A/ |ff
+7""vGe8-Ef"&^
+

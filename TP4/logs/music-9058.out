@@ -1,0 +1,64 @@
+Nombre de chansons (Train) : 214122
+Nombre de chansons (Val)   : 2162
+
+--- Exemple de partition (Train[0]) ---
+X:1
+L:1/8
+M:4/4
+K:Emin
+|: E2 EF E2 EF | DEFG AFDF | E2 EF E2 B2 |1 efe^d e2 e2 :|2 efe^d e3 B |: e2 ef g2 fe | 
+ defg afdf |1 e2 ef g2 fe | efe^d e3 B :|2 g2 bg f2 af | efe^d e2 e2 ||
+Taille du vocabulaire : 95 caractères uniques
+Caractères : '\n !"#$&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+Longueur moyenne : 290.1 | Longueur max : 2968
+Partition 0 : 183 caractères -> 500 après padding/troncature
+Vectorisée (10 premiers indices) : [56, 26, 17, 0, 44, 26, 17, 15, 24, 0]
+Partitions tronquées : 14697 / 214122 (6.9 %)
+=== RUN 1 : RNN sans clipping ===
+Epoch 01 | Train Loss: 1.2251 | Val Loss: 0.9536 | Val Acc: 0.7164 | Avg GradNorm: 0.701
+Epoch 02 | Train Loss: 0.9053 | Val Loss: 0.8684 | Val Acc: 0.7342 | Avg GradNorm: 0.363
+Epoch 03 | Train Loss: 0.8394 | Val Loss: 0.8281 | Val Acc: 0.7434 | Avg GradNorm: 0.319
+Epoch 04 | Train Loss: 0.8126 | Val Loss: 0.8248 | Val Acc: 0.7478 | Avg GradNorm: 0.299
+Epoch 05 | Train Loss: 0.7852 | Val Loss: 0.7786 | Val Acc: 0.7555 | Avg GradNorm: 0.292
+Epoch 06 | Train Loss: 0.7638 | Val Loss: 0.8023 | Val Acc: 0.7539 | Avg GradNorm: 0.268
+Epoch 07 | Train Loss: 0.7563 | Val Loss: 0.7666 | Val Acc: 0.7607 | Avg GradNorm: 0.294
+Epoch 08 | Train Loss: 0.7439 | Val Loss: 0.7585 | Val Acc: 0.7625 | Avg GradNorm: 0.282
+Epoch 09 | Train Loss: 0.7400 | Val Loss: 0.7366 | Val Acc: 0.7700 | Avg GradNorm: 0.280
+Epoch 10 | Train Loss: 0.7207 | Val Loss: 0.7928 | Val Acc: 0.7388 | Avg GradNorm: 0.241
+Epoch 11 | Train Loss: 0.7290 | Val Loss: 0.7207 | Val Acc: 0.7726 | Avg GradNorm: 0.269
+Epoch 12 | Train Loss: 0.7150 | Val Loss: 0.7163 | Val Acc: 0.7756 | Avg GradNorm: 0.254
+Epoch 13 | Train Loss: 0.7178 | Val Loss: 0.7457 | Val Acc: 0.7664 | Avg GradNorm: 0.267
+Epoch 14 | Train Loss: 0.7131 | Val Loss: 0.7239 | Val Acc: 0.7738 | Avg GradNorm: 0.232
+Epoch 15 | Train Loss: 0.7049 | Val Loss: 0.7158 | Val Acc: 0.7756 | Avg GradNorm: 0.246
+=== RUN 2 : RNN avec clipping 1.0 ===
+Epoch 01 | Train Loss: 1.2622 | Val Loss: 0.9424 | Val Acc: 0.7178 | Avg GradNorm: 0.982
+Epoch 02 | Train Loss: 0.9046 | Val Loss: 0.8625 | Val Acc: 0.7340 | Avg GradNorm: 0.395
+Epoch 03 | Train Loss: 0.8492 | Val Loss: 0.8380 | Val Acc: 0.7406 | Avg GradNorm: 0.364
+Epoch 04 | Train Loss: 0.8156 | Val Loss: 0.8106 | Val Acc: 0.7471 | Avg GradNorm: 0.326
+Epoch 05 | Train Loss: 0.7938 | Val Loss: 0.8031 | Val Acc: 0.7492 | Avg GradNorm: 0.315
+Epoch 06 | Train Loss: 0.7830 | Val Loss: 0.7968 | Val Acc: 0.7550 | Avg GradNorm: 0.324
+Epoch 07 | Train Loss: 0.7658 | Val Loss: 0.7673 | Val Acc: 0.7613 | Avg GradNorm: 0.304
+Epoch 08 | Train Loss: 0.7574 | Val Loss: 0.7640 | Val Acc: 0.7626 | Avg GradNorm: 0.318
+Epoch 09 | Train Loss: 0.7473 | Val Loss: 0.7624 | Val Acc: 0.7631 | Avg GradNorm: 0.285
+Epoch 10 | Train Loss: 0.7414 | Val Loss: 0.7618 | Val Acc: 0.7580 | Avg GradNorm: 0.293
+Epoch 11 | Train Loss: 0.7463 | Val Loss: 0.7529 | Val Acc: 0.7659 | Avg GradNorm: 0.325
+Epoch 12 | Train Loss: 0.7505 | Val Loss: 0.7503 | Val Acc: 0.7670 | Avg GradNorm: 0.296
+Epoch 13 | Train Loss: 0.7425 | Val Loss: 0.7544 | Val Acc: 0.7662 | Avg GradNorm: 0.300
+Epoch 14 | Train Loss: 0.7304 | Val Loss: 0.7383 | Val Acc: 0.7710 | Avg GradNorm: 0.251
+Epoch 15 | Train Loss: 0.7513 | Val Loss: 0.7836 | Val Acc: 0.7589 | Avg GradNorm: 0.332
+=== RUN 3 : LSTM avec clipping 1.0 ===
+Epoch 01 | Train Loss: 1.1224 | Val Loss: 0.7965 | Val Acc: 0.7545 | Avg GradNorm: 0.272
+Epoch 02 | Train Loss: 0.7301 | Val Loss: 0.6794 | Val Acc: 0.7848 | Avg GradNorm: 0.111
+Epoch 03 | Train Loss: 0.6548 | Val Loss: 0.6382 | Val Acc: 0.7950 | Avg GradNorm: 0.086
+Epoch 04 | Train Loss: 0.6173 | Val Loss: 0.6162 | Val Acc: 0.8014 | Avg GradNorm: 0.078
+Epoch 05 | Train Loss: 0.5914 | Val Loss: 0.5981 | Val Acc: 0.8071 | Avg GradNorm: 0.083
+Epoch 06 | Train Loss: 0.5737 | Val Loss: 0.5931 | Val Acc: 0.8086 | Avg GradNorm: 0.090
+Epoch 07 | Train Loss: 0.5607 | Val Loss: 0.5795 | Val Acc: 0.8122 | Avg GradNorm: 0.084
+Epoch 08 | Train Loss: 0.5466 | Val Loss: 0.5731 | Val Acc: 0.8146 | Avg GradNorm: 0.091
+Epoch 09 | Train Loss: 0.5362 | Val Loss: 0.5675 | Val Acc: 0.8158 | Avg GradNorm: 0.088
+Epoch 10 | Train Loss: 0.5270 | Val Loss: 0.5637 | Val Acc: 0.8176 | Avg GradNorm: 0.097
+Epoch 11 | Train Loss: 0.5204 | Val Loss: 0.5634 | Val Acc: 0.8180 | Avg GradNorm: 0.104
+Epoch 12 | Train Loss: 0.5108 | Val Loss: 0.5632 | Val Acc: 0.8173 | Avg GradNorm: 0.085
+Epoch 13 | Train Loss: 0.5044 | Val Loss: 0.5601 | Val Acc: 0.8187 | Avg GradNorm: 0.107
+Epoch 14 | Train Loss: 0.4973 | Val Loss: 0.5612 | Val Acc: 0.8184 | Avg GradNorm: 0.092
+Epoch 15 | Train Loss: 0.4922 | Val Loss: 0.5604 | Val Acc: 0.8191 | Avg GradNorm: 0.098

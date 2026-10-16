@@ -1,0 +1,29 @@
+===== T = 0.2 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ A2 | d2d2 d2c2 | B2A2 A2G2 | F2A2 A2d2 | e2d2 c2B2 | A2A2 A2Bc | d2d2 d2ef | g2f2 e2d2 | 
+ c2A2 A2 :|                                                                                                                                                                                                      
+
+===== T = 0.8 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ A3/2 | dAFA dAFD | GBAE GEBE | BAFA dAFD | GEFD E2Fd | d^cec ABAG | FAdf gfed | 
+ f2d2 d2d2 |]                                                                                                                                                                                                             
+
+===== T = 2.0 =====
+X:1
+T:Irish Reel
+M:4/4
+L:1/8
+K:D
+ (=c^d)=cE BDAG |: gab(g d'bge) d4"_AM"F:>)M:A2| ba.
+b ^Tg"_(udvergava= Robjklrg)t xolme1nten'!gIntermoter" c2!p!AAA2<(uble.A)"C7PScr" |:"Em" 
+ f2eB d4-"Gm" d6!40] |"C#md" faEA keeAB"A/CE"FRFEa- | eEcaBcbB"F<**A" BBdE"Desua" b2 | 
+"Gm"Bb(cb) d'g" (adbmime[sh Tg8) z{efg}=c'(=[gB]^f/ |{f} g3^f)(gE)"A#
+

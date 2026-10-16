@@ -1,0 +1,35 @@
+Nombre de chansons (Train) : 214122
+Nombre de chansons (Val)   : 2162
+
+--- Exemple de partition (Train[0]) ---
+X:1
+L:1/8
+M:4/4
+K:Emin
+|: E2 EF E2 EF | DEFG AFDF | E2 EF E2 B2 |1 efe^d e2 e2 :|2 efe^d e3 B |: e2 ef g2 fe | 
+ defg afdf |1 e2 ef g2 fe | efe^d e3 B :|2 g2 bg f2 af | efe^d e2 e2 ||
+Taille du vocabulaire : 95 caractères uniques
+Caractères : '\n !"#$&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+Longueur moyenne : 290.1 | Longueur max : 2968
+Partition 0 : 183 caractères -> 500 après padding/troncature
+Vectorisée (10 premiers indices) : [56, 26, 17, 0, 44, 26, 17, 15, 24, 0]
+Partitions tronquées : 14697 / 214122 (6.9 %)
+
+x : (128, 499) torch.int64 | y : (128, 499) torch.int64
+Décalage correct : True
+
+--- RNN ---
+embedding : 24320
+rnn       : 394240
+fc        : 48735
+TOTAL     : 467295
+logits : (128, 499, 95)
+hidden : Tensor (1, 128, 512)
+
+--- LSTM ---
+embedding : 24320
+rnn       : 1576960
+fc        : 48735
+TOTAL     : 1650015
+logits : (128, 499, 95)
+hidden : tuple de 2 -> h_n (1, 128, 512), c_n (1, 128, 512)
