@@ -1,0 +1,70 @@
+Node: starfighter-slurm-node-01-1
+Python: /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python
+Fri Oct 30 15:52:21 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      Off |   00000000:06:10.0 Off |                    0 |
+| N/A   38C    P8             16W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Computing vocabulary...
+Number of words: 23461
+Vocabulary size: 20226
+Epoch 1
+Prediction : two men are standing in in the with with other in in man in other man in in on
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 2
+Prediction : two men are sitting underwater down the pool with other are in one in other man in in be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 3
+Prediction : two men are standing underwater in the pool with them are in one in other is is look be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 4
+Prediction : two men are standing underwater board the pool while them are in one in other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 5
+Prediction : two snorkelers are in underwater board the pool with them in in one is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 6
+Prediction : two snorkelers are in underwater underwater the pool with them are in one in other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 7
+Prediction : two snorkelers are in diving equipment the pool with them are in one is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 8
+Prediction : two men are in diving equipment the pool with them are in one is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 9
+Prediction : two men are in diving equipment the pool with them are with man is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 10
+Prediction : two men are in diving equipment the pool with them are with man is other is is can see
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 11
+Prediction : two men are in diving equipment the pool with them are with man is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 12
+Prediction : two men are in diving equipment the pool with them are with man is other is is can be
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 13
+Prediction : two men are in diving equipment the pool with them are with man is other is is can see
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 14
+Prediction : two men are in diving equipment the pool with them are with man is other is is can see
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
+Epoch 15
+Prediction : two men are in diving equipment the pool with them are with man is other is is can see
+Target     : four people are scuba diving in swimming pool two girls one bald man the third person you can only
