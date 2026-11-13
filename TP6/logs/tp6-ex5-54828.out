@@ -1,0 +1,17 @@
+Job 54828 sur arcadia-slurm-node-2 ; GPU : 0 ; CPU : 4
+W1113 11:07:34.594000 24 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+tag=calib200 | variante=fp32-eager | threads=4 | calibration= | taille_mo=94.3 | latence_ms=46.43 | premier_appel_s=0.0 | top1_val=0.988 | accord_fp32=1.0 | ecart_logits=0.0 | n_val=500
+tag=calib200 | variante=fp32 | threads=4 | calibration= | taille_mo=94.3 | latence_ms=21.83 | premier_appel_s=24.2 | top1_val=0.988 | accord_fp32=1.0 | ecart_logits=0.0 | n_val=500
+tag=calib200 | variante=bf16 | threads=4 | calibration= | taille_mo=47.2 | latence_ms=16.44 | premier_appel_s=7.3 | top1_val=0.988 | accord_fp32=0.998 | ecart_logits=0.0242 | n_val=500
+/mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/_inductor/mkldnn_lowerings.py:805: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(w_zp_tensor, dtype=torch.int32), name=w_zp.get_name()
+tag=calib200 | variante=int8 | threads=4 | calibration=200 | taille_mo=23.9 | latence_ms=13.39 | premier_appel_s=3.9 | top1_val=0.988 | accord_fp32=1.0 | ecart_logits=0.083 | n_val=500
+W1113 11:09:56.369000 134 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+/mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/_inductor/mkldnn_lowerings.py:805: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(w_zp_tensor, dtype=torch.int32), name=w_zp.get_name()
+tag=calib10 | variante=int8 | threads=4 | calibration=10 | taille_mo=23.9 | latence_ms=9.2 | premier_appel_s=7.6 | top1_val=0.984 | accord_fp32=0.996 | ecart_logits=0.0995 | n_val=500
+W1113 11:10:47.750000 169 site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+tag=threads1 | variante=fp32 | threads=1 | calibration= | taille_mo=94.3 | latence_ms=76.49 | premier_appel_s=8.4 | top1_val=0.96 | accord_fp32=1.0 | ecart_logits=0.0 | n_val=100
+/mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/_inductor/mkldnn_lowerings.py:805: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  torch.tensor(w_zp_tensor, dtype=torch.int32), name=w_zp.get_name()
+tag=threads1 | variante=int8 | threads=1 | calibration=200 | taille_mo=23.9 | latence_ms=29.76 | premier_appel_s=3.4 | top1_val=0.97 | accord_fp32=0.99 | ecart_logits=0.0889 | n_val=100

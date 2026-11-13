@@ -1,0 +1,142 @@
+[rang 1/2] starfighter-slurm-node-02-1 : NVIDIA L4
+[rang 0/2] starfighter-slurm-node-01-1 : NVIDIA L4
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Bootstrap: Using ens18:10.91.152.161<0>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO cudaDriverVersion 13020
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NCCL version 2.29.7+cuda13.2
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NCCL git version stable b81d6a5a3
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Comm config Blocking set to 1
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO cudaDriverVersion 13020
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Bootstrap: Using ens18:10.91.152.162<0>
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NCCL version 2.29.7+cuda13.2
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NCCL git version stable b81d6a5a3
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Comm config Blocking set to 1
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/IB : No device found.
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/IB : Using [RO]; OOB ens18:10.91.152.162<0>
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Failed to initialize NET plugin IB
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/Socket : Using [0]ens18:10.91.152.162<0>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/IB : No device found.
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/IB : Using [RO]; OOB ens18:10.91.152.161<0>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Failed to initialize NET plugin IB
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Initialized NET plugin Socket
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Assigned NET plugin Socket to comm
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/Socket : Using [0]ens18:10.91.152.161<0>
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO GIN/Plugin: Could not find: libnccl-gin.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Failed to initialize any GIN plugin
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Using network Socket
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Initialized NET plugin Socket
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Assigned NET plugin Socket to comm
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO GIN/Plugin: Could not find: libnccl-gin.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Failed to initialize any GIN plugin
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Using network Socket
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO [Rank 1] ncclCommInitRankConfig comm 0x55dd1f296dd0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 6100 commId 0x727fe0259ead276 - Init START
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO [Rank 0] ncclCommInitRankConfig comm 0x5e813a8dff20 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 6100 commId 0x727fe0259ead276 - Init START
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO RAS client listening socket at ::1<28028>
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO RAS client listening socket at ::1<28028>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Bootstrap timings total 0.005164 (create 0.000030, send 0.000072, recv 0.000772, ring 0.000794, delay 0.000001)
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Bootstrap timings total 0.006683 (create 0.000030, send 0.000771, recv 0.001637, ring 0.000617, delay 0.000001)
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 0-7).
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 0-7).
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO comm 0x5e813a8dff20 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 00/02 : 0 1
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 01/02 : 0 1
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO P2P Chunksize set to 131072
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO comm 0x55dd1f296dd0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO P2P Chunksize set to 131072
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+starfighter-slurm-node-01-1:51:61 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 4
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+starfighter-slurm-node-01-1:51:60 [0] NCCL INFO [Proxy Service] Device 0 CPU core 3
+starfighter-slurm-node-02-1:20:28 [0] NCCL INFO [Proxy Service] Device 0 CPU core 1
+starfighter-slurm-node-02-1:20:29 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 2
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Symmetric VA size=24GB
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, globalGinSupport 0, globalNicFused 0 cuMemGdrSupport 1
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO CC Off, workFifoBytes 1048576
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO ncclCommInitRankConfig comm 0x5e813a8dff20 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 6100 commId 0x727fe0259ead276 - Init COMPLETE
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.49 (kernels 0.45, alloc 0.02, bootstrap 0.01, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Symmetric VA size=24GB
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, globalGinSupport 0, globalNicFused 0 cuMemGdrSupport 1
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO ncclCommInitRankConfig comm 0x55dd1f296dd0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 6100 commId 0x727fe0259ead276 - Init COMPLETE
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.48 (kernels 0.44, alloc 0.02, bootstrap 0.01, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+starfighter-slurm-node-01-1:51:62 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 5
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+starfighter-slurm-node-02-1:20:30 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 5
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+all-reduce de 102 Mo sur 2 processus : 876.9 ms ; débit algorithmique 0.12 Go/s ; débit par lien 0.12 Go/s
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO comm 0x5e813a8dff20 rank 0 nranks 2 cudaDev 0 busId 6100 - Destroy COMPLETE
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO comm 0x55dd1f296dd0 rank 1 nranks 2 cudaDev 0 busId 6100 - Destroy COMPLETE
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
+[W1113 10:50:39.292492423 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=26, addr=[starfighter-slurm-node-02-1]:44078, remote=[starfighter-slurm-node-01-1]:24821): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /__w/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:787 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x7a32ba163bfd in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10::DistError::DistError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7a32ba164bd2 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #2: c10::DistNetworkError::DistNetworkError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7a32ba165092 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #3: <unknown function> + 0x66ac05d (0x7a325107e05d in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x66ae336 (0x7a3251080336 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x15f (0x7a325107ce8f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xec47f8 (0x7a326069f7f8 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3f2815 (0x7a325fbcd815 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x134083 (0x5c3487819083 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #9: <unknown function> + 0x149cc9 (0x5c348782ecc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #10: _PyEval_EvalFrameDefault + 0x2dce (0x5c348781437e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #11: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #12: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #13: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #15: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #17: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #18: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #19: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #20: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #21: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #22: _PyEval_EvalFrameDefault + 0x719 (0x5c3487811cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #23: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x1390 (0x5c3487812940 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #25: _PyObject_FastCallDictTstate + 0xce (0x5c3487819d3e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #26: _PyObject_Call_Prepend + 0x67 (0x5c348782cf67 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #27: <unknown function> + 0x20dac7 (0x5c34878f2ac7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #28: PyObject_Call + 0x20f (0x5c348782f40f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x2dce (0x5c348781437e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #30: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x329 (0x5c34878118d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #33: _PyEval_EvalFrameDefault + 0x2dce (0x5c348781437e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #34: _PyFunction_Vectorcall + 0x6c (0x5c3487821c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #35: _PyEval_EvalFrameDefault + 0x329 (0x5c34878118d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #36: <unknown function> + 0x1d34fc (0x5c34878b84fc in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #37: PyEval_EvalCode + 0x85 (0x5c34878b8445 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #38: <unknown function> + 0x2049ca (0x5c34878e99ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #39: <unknown function> + 0x1ff475 (0x5c34878e4475 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #40: <unknown function> + 0x978ae (0x5c348777c8ae in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #41: _PyRun_SimpleFileObject + 0x1bb (0x5c34878dec2b in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #42: _PyRun_AnyFileObject + 0x44 (0x5c34878de5b4 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #43: Py_RunMain + 0x37a (0x5c34878db9ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #44: Py_BytesMain + 0x37 (0x5c34878ab7c7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #45: <unknown function> + 0x2a601 (0x7a32e8a2a601 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #46: __libc_start_main + 0x88 (0x7a32e8a2a718 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #47: <unknown function> + 0x1c668e (0x5c34878ab68e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+
+W1113 10:50:39.291000 15 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1298] The node 'starfighter-slurm-node-02-1_15_0' has failed to shutdown the rendezvous '54821-24821' due to an error of type RendezvousConnectionError.

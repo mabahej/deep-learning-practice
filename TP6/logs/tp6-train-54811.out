@@ -1,0 +1,4 @@
+Job 54811 sur arcadia-slurm-node-2 ; GPU : 0 ; CPU : 4
+époque 0: 72.9 s (177 img/s), top-1 val = 0.990
+époque 1: 19.4 s (662 img/s), top-1 val = 0.992
+Meilleur top-1 de validation : 0.992 -> best.pth

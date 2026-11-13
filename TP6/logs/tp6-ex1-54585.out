@@ -1,0 +1,20 @@
+Job 54585 sur arcadia-slurm-node-2 ; GPU : MIG-f2f35eff-b07f-5887-8dc6-e4889954a9b4 ; CPU : 4
+tag=ref-synth | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=110.1 | img_s_min=110.0 | img_s_max=110.1 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+[ref-async] retour de l'appel : 12.0 ms ; fin réelle du pas : 581.8 ms
+[W1112 10:36:15.107595241 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 765460480 bytes (free: 169869312, total: 11542724608).
+[W1112 10:36:15.127095049 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 765460480 bytes (free: 222298112, total: 11542724608).
+[W1112 10:36:15.152862118 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 52428800 bytes (free: 35651584, total: 11542724608).
+[W1112 10:36:15.152935469 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 52428800 bytes (free: 35651584, total: 11542724608).
+[W1112 10:36:18.469100561 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2097152 bytes (free: 0, total: 11542724608).
+[W1112 10:36:19.883832464 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 746586112 bytes (free: 591396864, total: 11542724608).
+[W1112 10:36:20.698096015 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 746586112 bytes (free: 622854144, total: 11542724608).
+[W1112 10:36:20.699851542 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 746586112 bytes (free: 622854144, total: 11542724608).
+[W1112 10:36:20.699934007 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 746586112 bytes (free: 622854144, total: 11542724608).
+[W1112 10:36:22.822683172 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 754974720 bytes (free: 163577856, total: 11542724608).
+[W1112 10:36:22.822765807 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 754974720 bytes (free: 163577856, total: 11542724608).
+[W1112 10:36:22.823976082 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 754974720 bytes (free: 163577856, total: 11542724608).
+[W1112 10:36:22.824065728 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 754974720 bytes (free: 163577856, total: 11542724608).
+[W1112 10:36:22.848442391 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 385875968 bytes (free: 144703488, total: 11542724608).
+[W1112 10:36:22.657328231 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 144703488 bytes (free: 4194304, total: 11542724608).
+[ref-maxbatch] batch maximal (fp32) : 120
+tag=ref-raw | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=3 | pin_memory=True | batch=64 | img_s=109.8 | img_s_min=109.8 | img_s_max=109.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=117.5

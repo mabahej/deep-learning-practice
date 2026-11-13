@@ -1,0 +1,136 @@
+Job 54821 sur starfighter-slurm-node-01-1 ; GPU : 0 ; CPU : 8
+Nœuds : starfighter-slurm-node-01-1 starfighter-slurm-node-02-1 ; rendez-vous sur starfighter-slurm-node-01-1
+[rang 0/2] starfighter-slurm-node-01-1 : NVIDIA L4
+[rang 1/2] starfighter-slurm-node-02-1 : NVIDIA L4
+all-reduce de 102 Mo sur 2 processus : 876.9 ms ; débit algorithmique 0.12 Go/s ; débit par lien 0.12 Go/s
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/IB : No device found.
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/IB : Using [RO]; OOB ens18:10.91.152.161<0>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO NET/Socket : Using [0]ens18:10.91.152.161<0>
+starfighter-slurm-node-01-1:51:51 [0] NCCL INFO Using network Socket
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/IB : No device found.
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/IB : Using [RO]; OOB ens18:10.91.152.162<0>
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+starfighter-slurm-node-02-1:20:20 [0] NCCL INFO NET/Socket : Using [0]ens18:10.91.152.162<0>
+NCCL version 2.29.7+cuda13.2
+tag=l4-x1 | materiel=NVIDIA L4 | processus=1 | noeuds=1 | backend=nccl | precision=bf16 | bf16_hook=False | donnees=synthetic | accumulation=1 | batch_par_processus=64 | batch_effectif=64 | pas_ms=138.5 | img_s=462.0
+NCCL version 2.29.7+cuda13.2
+tag=l4-x2 | materiel=NVIDIA L4 | processus=2 | noeuds=2 | backend=nccl | precision=bf16 | bf16_hook=False | donnees=synthetic | accumulation=1 | batch_par_processus=64 | batch_effectif=128 | pas_ms=867.0 | img_s=147.6
+NCCL version 2.29.7+cuda13.2
+tag=l4-x2-bf16hook | materiel=NVIDIA L4 | processus=2 | noeuds=2 | backend=nccl | precision=bf16 | bf16_hook=True | donnees=synthetic | accumulation=1 | batch_par_processus=64 | batch_effectif=128 | pas_ms=462.7 | img_s=276.7
+[W1113 10:53:50.852316437 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=26, addr=[starfighter-slurm-node-02-1]:51052, remote=[starfighter-slurm-node-01-1]:24823): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /__w/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:787 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x7d1b3bb63bfd in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10::DistError::DistError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7d1b3bb64bd2 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #2: c10::DistNetworkError::DistNetworkError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7d1b3bb65092 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #3: <unknown function> + 0x66ac05d (0x7d1aa507e05d in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x66ae336 (0x7d1aa5080336 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x15f (0x7d1aa507ce8f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xec47f8 (0x7d1ab469f7f8 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3f2815 (0x7d1ab3bcd815 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x134083 (0x5ec79908f083 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #9: <unknown function> + 0x149cc9 (0x5ec7990a4cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #10: _PyEval_EvalFrameDefault + 0x2dce (0x5ec79908a37e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #11: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #12: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #13: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #15: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #17: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #18: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #19: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #20: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #21: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #22: _PyEval_EvalFrameDefault + 0x719 (0x5ec799087cc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #23: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x1390 (0x5ec799088940 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #25: _PyObject_FastCallDictTstate + 0xce (0x5ec79908fd3e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #26: _PyObject_Call_Prepend + 0xe7 (0x5ec7990a2fe7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #27: <unknown function> + 0x20dac7 (0x5ec799168ac7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #28: PyObject_Call + 0x20f (0x5ec7990a540f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x2dce (0x5ec79908a37e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #30: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x329 (0x5ec7990878d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #33: _PyEval_EvalFrameDefault + 0x2dce (0x5ec79908a37e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #34: _PyFunction_Vectorcall + 0x6c (0x5ec799097c2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #35: _PyEval_EvalFrameDefault + 0x329 (0x5ec7990878d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #36: <unknown function> + 0x1d34fc (0x5ec79912e4fc in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #37: PyEval_EvalCode + 0x85 (0x5ec79912e445 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #38: <unknown function> + 0x2049ca (0x5ec79915f9ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #39: <unknown function> + 0x1ff475 (0x5ec79915a475 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #40: <unknown function> + 0x978ae (0x5ec798ff28ae in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #41: _PyRun_SimpleFileObject + 0x1bb (0x5ec799154c2b in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #42: _PyRun_AnyFileObject + 0x44 (0x5ec7991545b4 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #43: Py_RunMain + 0x37a (0x5ec7991519ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #44: Py_BytesMain + 0x37 (0x5ec7991217c7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #45: <unknown function> + 0x2a601 (0x7d1b3ca2a601 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #46: __libc_start_main + 0x88 (0x7d1b3ca2a718 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #47: <unknown function> + 0x1c668e (0x5ec79912168e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+
+W1113 10:53:50.803000 76 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1298] The node 'starfighter-slurm-node-02-1_76_0' has failed to shutdown the rendezvous '54821-24823' due to an error of type RendezvousConnectionError.
+NCCL version 2.29.7+cuda13.2
+tag=l4-x1-accum8 | materiel=NVIDIA L4 | processus=1 | noeuds=1 | backend=nccl | precision=bf16 | bf16_hook=False | donnees=synthetic | accumulation=8 | batch_par_processus=64 | batch_effectif=512 | pas_ms=1053.3 | img_s=486.1
+NCCL version 2.29.7+cuda13.2
+tag=l4-x2-accum8-bf16hook | materiel=NVIDIA L4 | processus=2 | noeuds=2 | backend=nccl | precision=bf16 | bf16_hook=True | donnees=synthetic | accumulation=8 | batch_par_processus=64 | batch_effectif=1024 | pas_ms=1378.2 | img_s=743.0
+[W1113 10:55:39.068954607 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=25, addr=[starfighter-slurm-node-02-1]:53454, remote=[starfighter-slurm-node-01-1]:24824): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /__w/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:787 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x9d (0x7f549ed63bfd in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10::DistError::DistError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7f549ed64bd2 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #2: c10::DistNetworkError::DistNetworkError(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x72 (0x7f549ed65092 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #3: <unknown function> + 0x66ac05d (0x7f540827e05d in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x66ae336 (0x7f5408280336 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x15f (0x7f540827ce8f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xec47f8 (0x7f541789f7f8 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3f2815 (0x7f5416dcd815 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x134083 (0x5fc0a1a17083 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #9: <unknown function> + 0x149cc9 (0x5fc0a1a2ccc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #10: _PyEval_EvalFrameDefault + 0x2dce (0x5fc0a1a1237e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #11: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #12: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #13: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #15: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #17: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #18: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #19: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #20: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #21: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #22: _PyEval_EvalFrameDefault + 0x719 (0x5fc0a1a0fcc9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #23: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x1390 (0x5fc0a1a10940 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #25: _PyObject_FastCallDictTstate + 0xce (0x5fc0a1a17d3e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #26: _PyObject_Call_Prepend + 0xe7 (0x5fc0a1a2afe7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #27: <unknown function> + 0x20dac7 (0x5fc0a1af0ac7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #28: PyObject_Call + 0x20f (0x5fc0a1a2d40f in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x2dce (0x5fc0a1a1237e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #30: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x329 (0x5fc0a1a0f8d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #33: _PyEval_EvalFrameDefault + 0x2dce (0x5fc0a1a1237e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #34: _PyFunction_Vectorcall + 0x6c (0x5fc0a1a1fc2c in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #35: _PyEval_EvalFrameDefault + 0x329 (0x5fc0a1a0f8d9 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #36: <unknown function> + 0x1d34fc (0x5fc0a1ab64fc in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #37: PyEval_EvalCode + 0x85 (0x5fc0a1ab6445 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #38: <unknown function> + 0x2049ca (0x5fc0a1ae79ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #39: <unknown function> + 0x1ff475 (0x5fc0a1ae2475 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #40: <unknown function> + 0x978ae (0x5fc0a197a8ae in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #41: _PyRun_SimpleFileObject + 0x1bb (0x5fc0a1adcc2b in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #42: _PyRun_AnyFileObject + 0x44 (0x5fc0a1adc5b4 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #43: Py_RunMain + 0x37a (0x5fc0a1ad99ca in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #44: Py_BytesMain + 0x37 (0x5fc0a1aa97c7 in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+frame #45: <unknown function> + 0x2a601 (0x7f549fc2a601 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #46: __libc_start_main + 0x88 (0x7f549fc2a718 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #47: <unknown function> + 0x1c668e (0x5fc0a1aa968e in /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/bin/python)
+
+W1113 10:55:39.020000 107 site-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1298] The node 'starfighter-slurm-node-02-1_107_0' has failed to shutdown the rendezvous '54821-24824' due to an error of type RendezvousConnectionError.

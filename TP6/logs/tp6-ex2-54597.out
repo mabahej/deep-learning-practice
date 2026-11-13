@@ -1,0 +1,50 @@
+Job 54597 sur arcadia-slurm-node-2 ; GPU : MIG-f2f35eff-b07f-5887-8dc6-e4889954a9b4 ; CPU : 4
+tag=raw-w0 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=0 | pin_memory=True | batch=64 | img_s=83.6 | img_s_min=83.4 | img_s_max=83.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=raw-w1 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=1 | pin_memory=True | batch=64 | img_s=109.9 | img_s_min=109.8 | img_s_max=109.9 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=raw-w2 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=2 | pin_memory=True | batch=64 | img_s=109.8 | img_s_min=109.8 | img_s_max=109.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=raw-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=3 | pin_memory=True | batch=64 | img_s=109.8 | img_s_min=109.8 | img_s_max=109.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=raw-w3-nopin | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=raw | workers=3 | pin_memory=False | batch=64 | img_s=107.8 | img_s_min=107.8 | img_s_max=107.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=small-w0 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=small | workers=0 | pin_memory=True | batch=64 | img_s=93.0 | img_s_min=93.0 | img_s_max=93.1 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=small-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=small | workers=3 | pin_memory=True | batch=64 | img_s=109.8 | img_s_min=109.8 | img_s_max=109.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+USDT:2026-11-12 11:09:42 126:126 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-12 11:09:46 126:126 SyncActivityProfilerHandler.cpp:59] profiler_stop
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+autograd::engine::evaluate_function: ConvolutionBack...         0.17%       9.577ms        20.94%        1.171s       4.419ms       0.000us         0.00%        1.734s       6.544ms           265  
+                                   ConvolutionBackward0         0.03%       1.540ms        19.69%        1.101s       4.156ms       0.000us         0.00%        1.685s       6.357ms           265  
+                             aten::convolution_backward         0.31%      17.399ms        19.67%        1.100s       4.150ms        1.685s        43.14%        1.685s       6.357ms           265  
+                                          ProfilerStep*         3.34%     186.997ms        51.88%        2.901s     580.280ms       0.000us         0.00%        1.585s     317.099ms             5  
+                                          ProfilerStep*         0.00%       0.000us         0.00%       0.000us       0.000us        1.186s        30.38%        1.186s     118.636ms            10  
+                                           aten::conv2d         0.01%     798.896us         4.51%     252.020ms     951.018us       0.000us         0.00%        1.120s       4.225ms           265  
+                                      aten::convolution         0.04%       2.080ms         4.49%     251.221ms     948.003us       0.000us         0.00%        1.120s       4.225ms           265  
+                                     aten::_convolution         0.51%      28.660ms         4.45%     249.117ms     940.065us       0.000us         0.00%        1.120s       4.225ms           265  
+                                aten::cudnn_convolution         0.15%       8.425ms         3.94%     220.457ms     831.912us     618.646ms        15.84%        1.120s       4.225ms           265  
+void cudnn::detail::dgrad_engine<float, 512, 6, 5, 3...         0.00%       0.000us         0.00%       0.000us       0.000us     731.420ms        18.73%     731.420ms       3.010ms           243  
+                                    Command Buffer Full        42.78%        2.393s        42.78%        2.393s       1.095ms     700.644ms        17.94%     700.644ms     320.514us          2186  
+void wgrad_alg0_engine<float, 128, 5, 5, 3, 3, 3, fa...         0.00%       0.000us         0.00%       0.000us       0.000us     658.768ms        16.87%     658.768ms       5.536ms           119  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 5.593s
+Self CUDA time total: 3.905s
+
+USDT:2026-11-12 11:09:54 149:149 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-11-12 11:09:58 149:149 SyncActivityProfilerHandler.cpp:59] profiler_stop
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+autograd::engine::evaluate_function: ConvolutionBack...         0.05%       3.049ms        22.13%        1.272s       4.799ms       0.000us         0.00%        1.734s       6.543ms           265  
+                                   ConvolutionBackward0         0.03%       1.563ms        20.92%        1.202s       4.536ms       0.000us         0.00%        1.684s       6.355ms           265  
+                             aten::convolution_backward         0.31%      17.709ms        20.90%        1.201s       4.531ms        1.684s        43.16%        1.684s       6.355ms           265  
+                                          ProfilerStep*         1.42%      81.567ms        50.76%        2.917s     583.349ms       0.000us         0.00%        1.658s     331.536ms             5  
+                                          ProfilerStep*         0.00%       0.000us         0.00%       0.000us       0.000us        1.185s        30.38%        1.185s     118.531ms            10  
+                                           aten::conv2d         0.01%     841.786us         5.01%     287.593ms       1.085ms       0.000us         0.00%        1.152s       4.349ms           265  
+                                      aten::convolution         0.04%       2.261ms         4.99%     286.752ms       1.082ms       0.000us         0.00%        1.152s       4.349ms           265  
+                                     aten::_convolution         0.02%       1.423ms         4.95%     284.490ms       1.074ms       0.000us         0.00%        1.152s       4.349ms           265  
+                                aten::cudnn_convolution         0.16%       9.113ms         4.93%     283.067ms       1.068ms     617.973ms        15.84%        1.152s       4.349ms           265  
+                                    Command Buffer Full        46.88%        2.693s        46.88%        2.694s       1.126ms     773.642ms        19.83%     773.642ms     323.429us          2392  
+void cudnn::detail::dgrad_engine<float, 512, 6, 5, 3...         0.00%       0.000us         0.00%       0.000us       0.000us     730.770ms        18.73%     730.770ms       3.007ms           243  
+void wgrad_alg0_engine<float, 128, 5, 5, 3, 3, 3, fa...         0.00%       0.000us         0.00%       0.000us       0.000us     658.781ms        16.88%     658.781ms       5.536ms           119  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 5.746s
+Self CUDA time total: 3.902s
+

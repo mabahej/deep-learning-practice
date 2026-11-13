@@ -1,0 +1,36 @@
+Job 54659 sur arcadia-slurm-node-4 ; GPU : MIG-bc0f97d3-1cd4-5e55-a259-7a23e43ae4e3 ; CPU : 4
+tag=fp32-synthetic | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=fp32 | channels_last=False | compile=False | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=109.8 | img_s_min=109.8 | img_s_max=109.8 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=tf32-synthetic | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=tf32 | channels_last=False | compile=False | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=261.4 | img_s_min=261.4 | img_s_max=261.4 | pic_memoire_go=5.93 | compilation_s=nan | epoque_s=nan
+tag=bf16-synthetic | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=False | compile=False | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=383.7 | img_s_min=383.7 | img_s_max=383.7 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+tag=bf16-cl-synthetic | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=False | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=530.1 | img_s_min=530.1 | img_s_max=530.1 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+In file included from /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/include/python3.10/Python.h:8,
+                 from /tmp/tmp_d30gi9b/cuda_utils.c:9:
+/mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /mnt/hdd/homes/mbenhassine/miniforge3/envs/deeplearning/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmp_d30gi9b/cuda_utils.c:1:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+W1112 11:47:37.960000 46 site-packages/torch/_inductor/utils.py:1953] [0/0] Not enough SMs to use max_autotune_gemm mode
+tag=bf16-cl-compile-synthetic | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=True | donnees=synthetic | workers= | pin_memory= | batch=64 | img_s=681.3 | img_s_min=681.3 | img_s_max=682.0 | pic_memoire_go=3.08 | compilation_s=66.0 | epoque_s=nan
+tag=bf16-cl-raw-w1 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=False | donnees=raw | workers=1 | pin_memory=True | batch=64 | img_s=242.7 | img_s_min=134.7 | img_s_max=299.0 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+tag=bf16-cl-compile-raw-w1 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=True | donnees=raw | workers=1 | pin_memory=True | batch=64 | img_s=155.6 | img_s_min=149.2 | img_s_max=175.1 | pic_memoire_go=3.07 | compilation_s=10.1 | epoque_s=nan
+tag=bf16-cl-raw-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=False | donnees=raw | workers=3 | pin_memory=True | batch=64 | img_s=525.2 | img_s_min=511.4 | img_s_max=525.6 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+tag=bf16-cl-compile-raw-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=True | donnees=raw | workers=3 | pin_memory=True | batch=64 | img_s=681.7 | img_s_min=681.1 | img_s_max=683.7 | pic_memoire_go=3.07 | compilation_s=10.6 | epoque_s=nan
+tag=bf16-cl-small-w1 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=False | donnees=small | workers=1 | pin_memory=True | batch=64 | img_s=471.8 | img_s_min=442.0 | img_s_max=496.4 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+tag=bf16-cl-compile-small-w1 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=True | donnees=small | workers=1 | pin_memory=True | batch=64 | img_s=338.2 | img_s_min=310.2 | img_s_max=500.8 | pic_memoire_go=3.07 | compilation_s=13.0 | epoque_s=nan
+tag=bf16-cl-small-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=False | donnees=small | workers=3 | pin_memory=True | batch=64 | img_s=524.8 | img_s_min=513.8 | img_s_max=524.9 | pic_memoire_go=3.29 | compilation_s=nan | epoque_s=nan
+tag=bf16-cl-compile-small-w3 | materiel=NVIDIA H100 NVL MIG 1g.12gb | arch=resnet50 | precision=bf16 | channels_last=True | compile=True | donnees=small | workers=3 | pin_memory=True | batch=64 | img_s=615.5 | img_s_min=594.3 | img_s_max=670.6 | pic_memoire_go=3.07 | compilation_s=10.8 | epoque_s=nan
+[W1112 11:54:54.279968176 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 52428800 bytes (free: 23068672, total: 11542724608).
+[W1112 11:54:54.280124592 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 52428800 bytes (free: 23068672, total: 11542724608).
+[W1112 11:54:57.103617994 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 360710144 bytes (free: 37748736, total: 11542724608).
+[W1112 11:54:57.270155751 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 360710144 bytes (free: 195035136, total: 11542724608).
+[W1112 11:54:59.868255310 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 192937984 bytes (free: 41943040, total: 11542724608).
+[W1112 11:54:59.989986049 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 96468992 bytes (free: 41943040, total: 11542724608).
+[W1112 11:55:00.663609177 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 50331648 bytes (free: 33554432, total: 11542724608).
+[W1112 11:55:00.663729299 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 50331648 bytes (free: 33554432, total: 11542724608).
+[maxbatch-bf16] batch maximal (bf16) : 240
